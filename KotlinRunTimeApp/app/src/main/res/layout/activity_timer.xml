@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".TimerActivity"
+    android:background="#3E3939">
+
+    <TextView
+        android:id="@+id/timerSpeedTextView"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerDistanceTextView"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/timerFinishButton"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="100dp"
+        android:enabled="false"
+        android:text="FINISH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSpeedTextView" />
+
+    <Button
+        android:id="@+id/timerRefreshButton"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="REFRESH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSpeedTextView" />
+
+    <TextView
+        android:id="@+id/timerMinuteCounterTextView"
+        android:layout_width="70dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center|right|left"
+        android:text="00:"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/timerSecondCounterTextView"
+        app:layout_constraintTop_toBottomOf="@+id/minutesnum"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/timerSecondCounterTextView"
+        android:layout_width="82dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center|right|left"
+        android:text="00"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minutesnum"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/timer_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="16dp"
+        android:text="Saniye"
+        app:layout_constraintStart_toEndOf="@+id/timer_minute"
+        app:layout_constraintTop_toBottomOf="@+id/secnum"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/timer_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="17dp"
+        android:text="Dakika"
+        app:layout_constraintStart_toEndOf="@+id/timer_hour"
+        app:layout_constraintTop_toBottomOf="@+id/minutesnum"
+        android:textColor="@color/white"/>
+
+    <NumberPicker
+        android:id="@+id/secnum"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="46dp"
+        android:theme="@style/AppTheme.Picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <NumberPicker
+        android:id="@+id/minutesnum"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/secnum"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppTheme.Picker"/>
+
+    <NumberPicker
+        android:id="@+id/hoursnum"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toStartOf="@+id/minutesnum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppTheme.Picker"/>
+
+    <TextView
+        android:id="@+id/timer_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="17dp"
+        android:text="Saat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hoursnum"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/timerHourCounterTextView"
+        android:layout_width="79dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center|right"
+        android:text="00:"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minutesnum"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/timerStartButton"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="30dp"
+        android:text="START"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSpeedTextView" />
+
+    <Button
+        android:id="@+id/timerStopButton"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="30dp"
+        android:text="STOP"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSpeedTextView" />
+
+    <Button
+        android:id="@+id/timerResumeButton"
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="30dp"
+        android:text="RESUME"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerSpeedTextView" />
+
+    <Switch
+        android:id="@+id/timerSwitchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Run Mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer_minute"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/timerDistanceTextView"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        android:text="0.00 m"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerMinuteCounterTextView"
+        android:textColor="@color/white"/>
+
+    <ImageButton
+        android:id="@+id/timer_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#3E3939"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
